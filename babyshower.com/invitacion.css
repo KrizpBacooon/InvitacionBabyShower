@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('fondo2.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Confeti decorativo superior */
+.top-confetti {
+    position: fixed;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.confetti-piece {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.confetti-blue-1 {
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(ellipse at 30% 30%, #dbeafe, #3b82f6);
+    animation-delay: 0s;
+}
+
+.confetti-blue-2 {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(ellipse at 30% 30%, #bfdbfe, #2563eb);
+    animation-delay: 1s;
+}
+
+.confetti-blue-3 {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(ellipse at 30% 30%, #dbeafe, #1d4ed8);
+    animation-delay: 2s;
+}
+
+.confetti-blue-4 {
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(ellipse at 30% 30%, #93c5fd, #1e40af);
+    animation-delay: 0.5s;
+}
+
+.confetti-blue-5 {
+    width: 9px;
+    height: 9px;
+    background: radial-gradient(ellipse at 30% 30%, #dbeafe, #2563eb);
+    animation-delay: 1.5s;
+}
+
+.confetti-blue-6 {
+    width: 11px;
+    height: 11px;
+    background: radial-gradient(ellipse at 30% 30%, #bfdbfe, #3b82f6);
+    animation-delay: 0.8s;
+}
+
+.confetti-blue-7 {
+    width: 7px;
+    height: 7px;
+    background: radial-gradient(ellipse at 30% 30%, #dbeafe, #1d4ed8);
+    animation-delay: 2.2s;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Imagen de Pooh sin fondo */
+.pooh-card {
+    background: transparent;
+    margin: 80px auto 30px;
+    width: 200px;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.pooh-card:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.pooh-image {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    mix-blend-mode: multiply;
+}
+
+/* Título BABY con imagen en medio */
+.titulo-baby {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+
+.titulo-baby .ba,
+.titulo-baby .by {
+    font-family: 'Playfair Display', serif;
+    font-size: 90px;
+    font-weight: bold;
+    color: rgba(100, 160, 200, 0.4);
+    line-height: 1;
+}
+
+.pooh-titulo {
+    width: 130px;
+    background: transparent !important;
+}
+
+/* Título BABY */
+.title-section {
+    margin: 30px 0;
+}
+
+.baby-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-weight: 700;
+    color: rgba(0, 106, 255, 0.8);
+    line-height: 0.8;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shower-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #d4af37;
+    font-weight: 700;
+    margin-top: -20px;
+}
+
+/* Nombre del bebé */
+.baby-name-section {
+    margin: 30px 0;
+}
+
+.baby-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #d4af37;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.parents-names {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #d4af37;
+    font-style: italic;
+}
+
+/* Frase especial */
+.special-phrase {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 30px auto;
+    font-style: italic;
+    max-width: 400px;
+}
+
+/* Fecha con líneas */
+.date-section {
+    margin: 40px 0;
+    position: relative;
+}
+
+.date-section::before,
+.date-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+.date-section::before {
+    left: 0;
+}
+
+.date-section::after {
+    right: 0;
+}
+
+.month {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.date-details {
+    font-size: 1.4rem;
+    color: #4a5568;
+    margin: 15px 0;
+    font-weight: 400;
+}
+
+.year {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-top: 15px;
+}
+
+/* Cuenta regresiva */
+.countdown-section {
+    margin: 40px 0;
+}
+
+.countdown-title {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 15px 10px;
+    min-width: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4af37;
+    display: block;
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    color: #4a5568;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Lugar */
+.location-section {
+    margin: 40px 0;
+}
+
+.location-name {
+    font-size: 1.3rem;
+    color: #4a5568;
+    font-weight: 400;
+}
+
+/* Botones */
+.buttons-section {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #d4af37;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #d4af37;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Frase de cierre */
+.closing-phrase {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin: 40px 0;
+    font-weight: 700;
+}
+
+/* Hexágonos inferiores */
+.honeycomb-bottom {
+    position: fixed;
+    bottom: 20px;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.honeycomb-bottom-left {
+    left: 20px;
+}
+
+.honeycomb-bottom-right {
+    right: 20px;
+}
+
+/* Control de música */
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #d4af37;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.music-control:hover {
+    background: #b8941f;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .baby-title {
+        font-size: 4rem;
+    }
+
+    .shower-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .baby-name {
+        font-size: 3.5rem;
+    }
+
+    .parents-names {
+        font-size: 1.5rem;
+    }
+
+    .special-phrase {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        padding: 12px 8px;
+        min-width: 60px;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        min-width: 200px;
+        padding: 10px 25px;
+    }
+
+    .pooh-card {
+        width: 160px;
+        margin: 60px auto 20px;
+    }
+
+    .date-section::before,
+    .date-section::after {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .baby-title {
+        font-size: 3rem;
+    }
+
+    .baby-name {
+        font-size: 2.8rem;
+    }
+
+    .top-confetti {
+        height: 100px;
+    }
+
+    .confetti-piece {
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
