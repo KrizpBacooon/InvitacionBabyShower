@@ -11,7 +11,7 @@ function startTransition() {
 
         // Redirigir después de la animación
         setTimeout(() => {
-            window.location.href = 'public/html/invitacion.html';
+            window.location.href = 'invitacion.html';
         }, 3000);
     }, 1000);
 }
