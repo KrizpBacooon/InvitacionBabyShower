@@ -11,7 +11,7 @@ function startTransition() {
 
         // Redirigir después de la animación
         setTimeout(() => {
-            window.location.href = 'invitacion.html';
+            window.location.href = '/InvitacionBabyShower/invitacion.html';
         }, 3000);
     }, 1000);
 }
